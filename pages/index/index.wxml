@@ -4,10 +4,18 @@
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="userinfo-nickname">{{userStore.userInfo.nickname || userInfo.nickName}}</text>
     </block>
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="userhobbies">
+    <text>爱好：</text>
+    <view wx:for="{{userStore.hobbies}}" wx:key="index" class="item">
+      <text>{{item}}</text>
+      <button data-index="{{index}}" bindtap="handleDelete">删除</button>
+    </view>
+    <button bindtap="handleAdd">增加</button>
   </view>
 </view>
