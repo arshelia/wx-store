@@ -3,4 +3,12 @@
   <block wx:for="{{logs}}" wx:for-item="log">
     <text class="log-item">{{index + 1}}. {{log}}</text>
   </block>
+  <view class="userhobbies">
+    <text>爱好：</text>
+    <view wx:for="{{userStore.hobbies}}" wx:key="index" class="item">
+      <text>{{item}}</text>
+      <button data-index="{{index}}" bindtap="handleDelete">删除</button>
+    </view>
+    <button bindtap="handleAdd">增加</button>
+  </view>
 </view>

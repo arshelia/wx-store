@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-03-26 00:10:23
- * @LastEditTime: 2020-03-31 01:46:47
+ * @LastEditTime: 2020-03-31 01:54:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /wx-store/pages/index/index.js
@@ -72,6 +72,11 @@ Page(
       handleAdd() {
         console.log("add操作");
         userStore.commit("AddHobby", "reading");
+      },
+      handleToLog() {
+        wx.navigateTo({
+          url: "/pages/logs/logs",
+        });
       },
     },
     {

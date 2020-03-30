@@ -18,4 +18,5 @@
     </view>
     <button bindtap="handleAdd">增加</button>
   </view>
+  <button bindtap="handleToLog">前往log</button>
 </view>

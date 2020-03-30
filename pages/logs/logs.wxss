@@ -6,3 +6,13 @@
 .log-item {
   margin: 10rpx;
 }
+.userhobbies{
+  margin-top:20px;
+}
+.item{
+  width:250px;
+  height:50px;
+  display:flex;
+  justify-content: space-bettwen;
+  align-items: center;
+}
