@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-03-26 00:10:23
- * @LastEditTime: 2020-03-29 00:29:36
+ * @LastEditTime: 2020-03-31 01:46:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /wx-store/pages/index/index.js
@@ -67,9 +67,11 @@ Page(
         console.log(event);
         const index = event.currentTarget.dataset.index;
         console.log(`====删除${index}===`);
+        userStore.commit("DeleteHobby", index);
       },
       handleAdd() {
         console.log("add操作");
+        userStore.commit("AddHobby", "reading");
       },
     },
     {

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-03-28 18:32:48
- * @LastEditTime: 2020-03-29 00:38:08
+ * @LastEditTime: 2020-03-31 01:47:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /wx-store/store/user.js
@@ -15,11 +15,14 @@ const userStore = new Store({
     hobbies: ["food", "sports"],
   },
   mutations: {
+    DeleteHobby(state, index) {
+      state.hobbies.splice(index, 1);
+    },
     AddHobby(state, hobby) {
       if (type(hobby) !== "array") {
         state.hobbies.push(hobby);
       } else {
-        state.hobbies = this.state.hobbies.cacat(hobby);
+        state.hobbies = this.state.hobbies.concat(hobby);
       }
     },
     setUserinfo(state, userinfo) {
