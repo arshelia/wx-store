@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-03-26 00:10:23
- * @LastEditTime: 2020-03-31 01:56:43
+ * @LastEditTime: 2020-06-03 23:50:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /wx-store/pages/logs/logs.js
@@ -10,7 +10,6 @@
 const util = require("../../utils/util.js");
 import { createPage } from "../../lib/wx-store/index";
 import userStore from "../../store/user";
-
 Page(
   createPage(
     {

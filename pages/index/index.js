@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-03-26 00:10:23
- * @LastEditTime: 2020-03-31 01:54:59
+ * @LastEditTime: 2020-06-04 00:07:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /wx-store/pages/index/index.js
@@ -64,7 +64,6 @@ Page(
         });
       },
       handleDelete(event) {
-        console.log(event);
         const index = event.currentTarget.dataset.index;
         console.log(`====删除${index}===`);
         userStore.commit("DeleteHobby", index);
